@@ -26,7 +26,7 @@ app.config['MAIL_PASSWORD'] = "Anime@05112004"
 app.config['MAIL_SERVER'] = "smtp.googlemail.com"
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_PORT'] = 587
-stripe.api_key = ""sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+stripe.api_key = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
 
 
 Bootstrap(app)
