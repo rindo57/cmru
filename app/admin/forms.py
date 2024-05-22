@@ -1,7 +1,8 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, FloatField, FileField
 from wtforms.validators import DataRequired, Length
-
+import random
+from string import ascii_letters, digits
 
 class AddItemForm(FlaskForm):
 	name = StringField("Name:", validators=[DataRequired(), Length(max=50)])
@@ -11,6 +12,7 @@ class AddItemForm(FlaskForm):
 	details = StringField("Details:", validators=[DataRequired()])
 	submit = SubmitField("Add")
         price_id = "".join([random.choice(digits) for n in range(5)])
+	
 class OrderEditForm(FlaskForm):
 	status = StringField("Status:", validators=[DataRequired()])
 	submit = SubmitField("Update")
