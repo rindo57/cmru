@@ -19,14 +19,15 @@ app = Flask(__name__)
 app.register_blueprint(admin)
 sec = secrets.token_hex(16)
 app.config["SECRET_KEY"] = sec
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ["DB_URI"]
+app.config['SQLALCHEMY_DATABASE_URI'] ="sqlite:///test.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['MAIL_USERNAME'] = os.environ["EMAIL"]
-app.config['MAIL_PASSWORD'] = os.environ["PASSWORD"]
+app.config['MAIL_USERNAME'] = "yunoasta830@gmail.com"
+app.config['MAIL_PASSWORD'] = "Anime@05112004"
 app.config['MAIL_SERVER'] = "smtp.googlemail.com"
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_PORT'] = 587
-stripe.api_key = os.environ["STRIPE_PRIVATE"]
+stripe.api_key = ""sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+
 
 Bootstrap(app)
 db.init_app(app)
