@@ -11,8 +11,8 @@ class User(UserMixin, db.Model):
 	email = db.Column(db.String(50), nullable=False)
 	phone = db.Column(db.String(50), nullable=False)
 	password = db.Column(db.String(250), nullable=False)
-	admin = db.Column(db.Boolean, nullable=True, default=True)
-	email_confirmed = db.Column(db.Boolean, nullable=True, default=False)
+	admin = db.Column(db.Boolean, nullable=True, default=False)
+	email_confirmed = db.Column(db.Boolean, nullable=True, default=False) #fuk this having issue setting true for now
 	cart = db.relationship('Cart', backref='buyer')
 	orders = db.relationship("Order", backref='customer')
 
