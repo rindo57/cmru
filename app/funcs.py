@@ -41,16 +41,17 @@ def fulfill_order(cid):
 		ordered_item = Ordered_item(oid=order.id, itemid=cart.item.id, quantity=cart.quantity)
 		
 		if Ordered_item.itemid=="":
+			print("no item")
+			db.session.delete(ordered_item)
+			db.session.delete(order)
+			print("no item")
+
+		else:
 			print("Ï am here")
 			db.session.add(ordered_item)
 			db.session.commit()
 			current_user.remove_from_cart(cart.item.id, cart.quantity)
 			db.session.commit()
-		else:
-			print("no item")
-			db.session.delete(ordered_item)
-			db.session.delete(order)
-			print("no item")
 
 
 def admin_only(func):
