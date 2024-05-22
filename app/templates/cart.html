@@ -47,9 +47,9 @@
         {% endfor %}
 	</div>
 	{% if price %}
- 	<div class="success">
-        	Payment successful! Redirecting to order page...
-    	</div>
-    	<meta http-equiv="refresh" content="5; url={{ url_for('orders') }}">
+	<div class="check">
+  	<a href="{{ url_for('payment_success') }}" class="bg-success btn-block btn-primary checkout"> Checkout </a>
+	</div>
+    	
 	{% endif %}
 {% endblock %}
