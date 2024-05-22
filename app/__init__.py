@@ -11,13 +11,13 @@ from .funcs import mail, send_confirmation_email, fulfill_order
 from dotenv import load_dotenv
 from .admin.routes import admin
 import secrets
-print(secrets.token_hex(16))
+
 
 
 load_dotenv()
 app = Flask(__name__)
 app.register_blueprint(admin)
-sec = secrets.token_hex(16))
+sec = secrets.token_hex(16)
 app.config["SECRET_KEY"] = sec
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ["DB_URI"]
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
