@@ -37,21 +37,11 @@ def fulfill_order(cid):
 
 	current_user = User.query.get(uid)
 	for cart in current_user.cart:
-		if cart:
-			ordered_item = Ordered_item(oid=order.id, itemid=cart.item.id, quantity=cart.quantity)
-			print(cart.item.id)
-			print("Ï am here")
-			db.session.add(ordered_item)
-			db.session.commit()
-			current_user.remove_from_cart(cart.item.id, cart.quantity)
-			db.session.commit()
-			
-
-		else:
-			print("no item")
-			db.session.delete(order)
-			db.session.commit()
-			print("no item")
+		ordered_item = Ordered_item(oid=order.id, itemid=cart.item.id, quantity=cart.quantity)
+		db.session.add(ordered_item)
+		db.session.commit()
+		current_user.remove_from_cart(cart.item.id, cart.quantity)
+		db.session.commit()
 
 
 
