@@ -27,10 +27,10 @@ def send_confirmation_email(user_email) -> None:
 	)
 	mail.send(msg)
 
-def fulfill_order(session):
+def fulfill_order(cid):
 	""" Fulfils order on successful payment """
 
-	uid = session['client_reference_id']
+	uid = cid
 	order = Order(uid=uid, date=datetime.datetime.now(), status="processing")
 	db.session.add(order)
 	db.session.commit()
