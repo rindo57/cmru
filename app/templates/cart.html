@@ -33,11 +33,12 @@
 				<img src="{{ items[i].image }}" class="pic">
 			</div>
 			<b>{{ items[i].name }}</b>
-			<span class="right-item">${{ items[i].price }}</span><br>
+			<span class="right-item">₹{{ items[i].price * 80}}</span><br>
+			
 			Quantity: 
 			<span class="right-item">{{ quantity[i] }}</span><br>
 			Total:
-			<span class="right-item">${{ quantity[i]*items[i].price }}</span>
+			<span class="right-item">₹{{ quantity[i]*items[i].price * 80}}</span>
 			<br><br>
 			<a href="{{ url_for('remove', id=items[i].id, quantity=quantity[i]) }}">
 				<button class="remove-from-cart"> Remove from Cart </button>
