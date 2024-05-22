@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: #e0e0e0;
-    background-color: #2a2f4e;
+    color: #333;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
 }
@@ -11,25 +11,25 @@ body {
 }
 
 a {
-    color: #1e90ff;
+    color: #007bff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #1c7ed6;
+    color: #0056b3;
     text-decoration: none;
 }
 
 .navbar {
     padding: 0.7rem 6rem;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-color: #1c1c1e;
+    background-color: #fff;
 }
 
 footer {
     box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1), 0 -1px 5px rgba(0, 0, 0, 0.15);
-    background-color: #1c1c1e;
+    background-color: #fff;
     padding: 1rem;
     text-align: center;
 }
@@ -37,14 +37,14 @@ footer {
 .forms, .flash-error, .success {
     margin: 0 auto;
     max-width: 400px;
-    background-color: #2a2f4e;
+    background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 form .btn {
-    background: #1e90ff;
+    background: #007bff;
     color: white;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -54,7 +54,7 @@ form .btn {
 }
 
 form .btn:hover {
-    background: #1c7ed6;
+    background: #0056b3;
 }
 
 .flash-error, .help-block, .success {
@@ -160,14 +160,14 @@ form .btn:hover {
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 5px;
-    background-color: #1e90ff;
+    background-color: #007bff;
     color: white;
     border: none;
     transition: background 0.3s ease;
 }
 
 .checkout:hover {
-    background-color: #1c7ed6;
+    background-color: #0056b3;
 }
 
 .details {
