@@ -37,11 +37,17 @@ def fulfill_order(cid):
 
 	current_user = User.query.get(uid)
 	for cart in current_user.cart:
+		
 		ordered_item = Ordered_item(oid=order.id, itemid=cart.item.id, quantity=cart.quantity)
-		db.session.add(ordered_item)
-		db.session.commit()
-		current_user.remove_from_cart(cart.item.id, cart.quantity)
-		db.session.commit()
+		if ordered_item:
+			db.session.add(ordered_item)
+			db.session.commit()
+			current_user.remove_from_cart(cart.item.id, cart.quantity)
+			db.session.commit()
+		else:
+			db.session.delete(order)
+			print("no item")
+
 
 def admin_only(func):
 	""" Decorator for giving access to authorized users only """
