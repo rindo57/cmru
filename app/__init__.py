@@ -184,6 +184,8 @@ def search():
 # stripe stuffs
 @app.route('/payment_success')
 def payment_success():
+	cid = current_user.id
+	fulfill_order(cid)
 	return render_template('success.html')
 
 @app.route('/payment_failure')
