@@ -48,7 +48,7 @@
         {% endfor %}
 	</div>
 	{% if price %}
-	<div class="check">
+	<div method="POST" class="check">
   	<a href="{{ url_for('payment_success') }}" <button class="bg-success btn-block btn-primary checkout"> Place an order! </button> </a>
 	</div>
     	
