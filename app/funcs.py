@@ -39,12 +39,14 @@ def fulfill_order(cid):
 	for cart in current_user.cart:
 		
 		ordered_item = Ordered_item(oid=order.id, itemid=cart.item.id, quantity=cart.quantity)
-		if ordered_item:
+		
+		if Ordered_item.itemid:
 			db.session.add(ordered_item)
 			db.session.commit()
 			current_user.remove_from_cart(cart.item.id, cart.quantity)
 			db.session.commit()
 		else:
+			db.session.delete(ordered_item)
 			db.session.delete(order)
 			print("no item")
 
