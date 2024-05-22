@@ -32,8 +32,7 @@ def fulfill_order(cid):
 
 	uid = cid
 	order = Order(uid=uid, date=datetime.datetime.now(), status="processing")
-	db.session.add(order)
-	db.session.commit()
+
 
 	current_user = User.query.get(uid)
 	for cart in current_user.cart:
@@ -42,11 +41,11 @@ def fulfill_order(cid):
 		
 		if Ordered_item.itemid=="":
 			print("no item")
-			db.session.delete(ordered_item)
-			db.session.delete(order)
 			print("no item")
 
 		else:
+			db.session.add(order)
+			db.session.commit()
 			print("Ï am here")
 			db.session.add(ordered_item)
 			db.session.commit()
