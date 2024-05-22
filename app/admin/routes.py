@@ -31,7 +31,7 @@ def add():
         details = form.details.data
         form.image.data.save('app/static/uploads/' + form.image.data.filename)
         image = url_for('static', filename=f'uploads/{form.image.data.filename}')
-        price_id = form.price_id.data
+        price_id = form.price_id
         item = Item(name=name, price=price, category=category, details=details, image=image, price_id=price_id)
         db.session.add(item)
         db.session.commit()
