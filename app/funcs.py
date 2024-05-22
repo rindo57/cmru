@@ -38,8 +38,8 @@ def fulfill_order(cid):
 	for cart in current_user.cart:
 		
 		ordered_item = Ordered_item(oid=order.id, itemid=cart.item.id, quantity=cart.quantity)
-		
-		if Ordered_item.itemid=="":
+		print(cart.item.id)
+		if cart.item.id=="":
 			print("no item")
 			print("no item")
 
