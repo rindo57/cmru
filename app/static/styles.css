@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #e0e0e0;
-    background-color: #121212;
+    background-color: #2a2f4e;
     margin: 0;
     padding: 0;
 }
@@ -37,7 +37,7 @@ footer {
 .forms, .flash-error, .success {
     margin: 0 auto;
     max-width: 400px;
-    background-color: #2c2c2e;
+    background-color: #2a2f4e;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -85,7 +85,7 @@ form .btn:hover {
     padding: 1rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    background-color: #2c2c2e;
+    background-color: #2a2f4e;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,7 +99,7 @@ form .btn:hover {
 .item-display {
     margin: 0 auto;
     max-width: 500px;
-    background-color: #2c2c2e;
+    background-color: #2a2f4e;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
