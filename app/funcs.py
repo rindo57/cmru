@@ -40,7 +40,7 @@ def fulfill_order(cid):
 		
 		ordered_item = Ordered_item(oid=order.id, itemid=cart.item.id, quantity=cart.quantity)
 		print(cart.item.id)
-		if cart.item.id=="":
+		if not cart.item.id:
 			print("no item")
 			db.session.delete(order)
 			db.session.commit()
