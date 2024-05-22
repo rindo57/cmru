@@ -182,7 +182,7 @@ def search():
 	return render_template('home.html', items=items, search=True, query=query)
 
 # stripe stuffs
-@app.route('/payment_success')
+@app.route('/payment_success', methods=['POST'])
 def payment_success():
 	cid = current_user.id
 	fulfill_order(cid)
